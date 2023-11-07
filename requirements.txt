@@ -1,0 +1,6 @@
+binance.spot
+telegram
+joblib
+tensorflow
+numpy
+python-dotenv
