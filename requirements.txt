@@ -4,3 +4,4 @@ joblib
 tensorflow
 numpy
 python-dotenv
+scikit-learn
