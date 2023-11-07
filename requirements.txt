@@ -1,5 +1,5 @@
-binance.spot
-telegram
+python-telegram-bot
+binance-connector
 joblib
 tensorflow
 numpy
