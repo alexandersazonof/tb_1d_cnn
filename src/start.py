@@ -190,4 +190,4 @@ while True:
 
     traded = main_logic()
 
-    time.sleep(1)
+    time.sleep(50)
