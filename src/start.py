@@ -175,8 +175,8 @@ def main_logic():
                                  f'New Order price: {new_order_price}\n'
                                  f'Predict price: {predicted - 100}\n'
                                  f'Quantity: {order_quantity}\n'
-                                 f'Price impact: {price_impact}'
-                                 f'Profit USD: {round((new_order_price - round(order_price, 2)) * float(order_quantity))}$\n'
+                                 f'Price impact: {price_impact}\n'
+                                 f'Profit USD: {round((new_order_price - round(order_price, 2), 4) * float(order_quantity))}$\n'
                                  f'Profit %: {round((new_order_price / (float(last_spot_price) / 100)) - 100, 2)}%'
                                  ))
 
