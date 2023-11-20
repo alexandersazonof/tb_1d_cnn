@@ -82,7 +82,10 @@ def get_order_info(
 def get_balance():
     client = Spot(api_key=BINANCE_API_KEY, api_secret=BINANCE_KEY_SECRET)
 
-    account = client.account()
+    try:
+        account = client.account()
+    except Exception:
+        return 0
     for balance in account['balances']:
         if balance['asset'] == 'USDT':
             return balance['free']
@@ -176,7 +179,7 @@ def main_logic():
                                  f'Predict price: {predicted - 100}\n'
                                  f'Quantity: {order_quantity}\n'
                                  f'Price impact: {price_impact}\n'
-                                 f'Profit usd: {round((float(new_order_price)-float(order_price)) * float(order_quantity),2)}\n'
+                                 f'Profit usd: {round((float(new_order_price)-float(order_price)) * float(order_quantity),2)}$\n'
                                  f'Profit %: {round((new_order_price / (float(last_spot_price) / 100)) - 100, 2)}%'
                                  ))
 
